@@ -1,4 +1,4 @@
-
+#
 steps:
 - id: go_test #testa a aplicação
   name: "gcr.io/cloud-builders/go"
@@ -6,7 +6,7 @@ steps:
   env: ["GOPATH=go/."]
 
 - name: 'gcr.io/cloud-builders/docker' #Gera uma imagem a partir do projeto
-  args:
+  args:cd
   - 'build'
   - '--build-arg'
   - 'version=1.24.0'
